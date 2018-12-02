@@ -1,0 +1,116 @@
+$orange: #ff8663;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.popup-form {
+  position: absolute;
+  max-width: 380px;
+  display: block;
+  background-color: #fff;
+  border-radius: 1rem;
+
+  &__header {
+    background-color: $orange;
+    color: #fff;
+  }
+
+  &__content {
+    padding: 0 1rem;
+  }
+
+  .close {
+    position: absolute;
+    right: 5px;
+    top: 1px;
+  }
+}
+
+.review {
+  &__header {
+    padding: .625rem 1rem;
+
+    background-color: $orange;
+    color: #fff;
+
+    font-size: 12px;
+  }
+
+  &__list {
+    height: 150px;
+
+    background-color: #fff;
+
+    border-bottom: 1px solid #f0f0f0;
+
+    overflow-y: auto;
+  }
+}
+
+.review-form {
+  background: #fff;
+  padding: 1rem;
+
+  &__title {
+    color: $orange;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: .25rem 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  input, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    height: 2rem;
+
+    border-radius: 1rem;
+    border: 1px solid #c4c4c4;
+    background-color: #fff;
+
+  }
+
+  textarea {
+    height: 130px;
+    resize: none;
+    overflow: auto;
+  }
+
+  button {
+    display: block;
+    width: 87px;
+    height: 30px;
+    margin-left: auto;
+
+    text-align: center;
+    border: 0;
+    box-shadow: none;
+    border-radius: .5rem;
+    background-color: $orange;
+
+    color: #fff;
+  }
+}
+
+
+.review {
+  padding: .25rem .625rem;
+
+  font-size: 12px;
+}

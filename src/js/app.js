@@ -23,6 +23,7 @@ export default class appMap {
             if (addReview) {
                 e.preventDefault();
                 const data = this.getFormData(e.target.closest('form'));
+                data.date = date = new Date().toLocaleString();
                 this.addPlaceReview(data);
                 this.showMainBalloon({coords: data.coords, address: data.address});
                 this.saveReviews();
@@ -179,9 +180,8 @@ export default class appMap {
         }
     }
 
-    addPlaceReview({place, address, author, message, coords}) {
-        const date = new Date().toLocaleString(),
-            id = this.reviewPoints.length;
+    addPlaceReview({place, address, author, message, coords, date}) {
+        const id = this.reviewPoints.length;
 
         const reviewPoint = new Point({coords, address, author, message, date, place, id});
 
